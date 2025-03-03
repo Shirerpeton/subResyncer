@@ -72,7 +72,7 @@ func getSrtTimestampFromDuration(d time.Duration) string {
 	minutes := int(d.Minutes()) % 60
 	seconds := int(d.Seconds()) % 60
 	miliseconds := int(d.Milliseconds()) % 1000
-	timestamp := fmt.Sprintf("%02d:%02d:%02d,%d", hours, minutes, seconds, miliseconds)
+	timestamp := fmt.Sprintf("%02d:%02d:%02d,%03d", hours, minutes, seconds, miliseconds)
 	return timestamp
 }
 
